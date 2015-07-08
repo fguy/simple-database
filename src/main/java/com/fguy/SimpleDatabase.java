@@ -135,11 +135,19 @@ public class SimpleDatabase {
 	 * no transaction is in progress.
 	 */
 	void rollback() {
-		boolean isNoTransaction = _transactions.empty();
+		if (_transactions.empty()) {
+			_out.println("NO TRANSACTION");
+			return;
+		}
 		Map<String, Integer> db = _transactions.pop();
-		isNoTransaction = isNoTransaction || db.size() == 0;
+		_transactionIndices.pop();
+		if (db.size() == 0) {
+			_out.println("NO TRANSACTION");
+			return;
+		}
+		boolean isNoTransaction = true;
 		for (String name : db.keySet()) { // check whether it has any change.
-			if (db.get(name) != null) {
+			if (db.containsKey(name)) {
 				isNoTransaction = false;
 				break;
 			}
@@ -148,7 +156,6 @@ public class SimpleDatabase {
 			_out.println("NO TRANSACTION");
 			return;
 		}
-		_transactionIndices.pop();
 		_inTransaction = !_transactions.empty(); // set true if there's nested
 													// transaction.
 	}
