@@ -1,0 +1,422 @@
+{\rtf1\ansi\ansicpg949\cocoartf1347\cocoasubrtf570
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fmodern\fcharset0 Courier;\f2\fmodern\fcharset0 Courier-Oblique;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww20720\viewh12180\viewkind0
+\deftab720
+\pard\pardeftab720\sa321
+
+\f0\b\fs48 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Simple Database Challenge\
+\pard\pardeftab720\sa240
+
+\b0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 In the Simple Database problem, you'll implement an in-memory database similar to Redis. For simplicity's sake, instead of dealing with multiple clients and communicating over the network, your program will receive commands via standard input (stdin), and should write appropriate responses to standard output (stdout).\
+\pard\pardeftab720\sa280
+
+\b\fs28 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Guidelines\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240
+\ls1\ilvl0
+\b0\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 This problem should take you between 30 and 90 minutes.\uc0\u8232 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 We recommend that you use a high-level language, like Python, Ruby, JavaScript, or Java. We're much more interested in seeing clean code and good 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 algorithmic
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  performance than raw throughput.\uc0\u8232 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 It is very helpful to the engineers who grade these challenges if you reduce external dependencies, make compiling your code as simple as possible, and include instructions for compiling and/or running your code directly from the command line, without the use of an IDE.\uc0\u8232 \
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Your submission must be able to detect and handle End-Of-File (EOF).\uc0\u8232 \
+\pard\pardeftab720\sa280
+
+\b\fs28 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Data Commands\
+\pard\pardeftab720\sa240
+
+\b0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Your database should accept the following commands:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240
+\ls2\ilvl0
+\f1 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 SET 
+\f2\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 name
+\f1\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  
+\f2\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 value
+\f0\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'96 Set the variable 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 name
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  to the value 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 value
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . Neither variable names nor values will contain spaces.\uc0\u8232 \
+\ls2\ilvl0
+\f1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 GET 
+\f2\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 name
+\f0\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'96 Print out the value of the variable 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 name
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , or 
+\f1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 NULL
+\f0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  if that variable is not set.\uc0\u8232 \
+\ls2\ilvl0
+\f1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 UNSET 
+\f2\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 name
+\f0\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'96 Unset the variable 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 name
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , making it just like that variable was never set.\uc0\u8232 \
+\ls2\ilvl0
+\f1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 NUMEQUALTO 
+\f2\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 value
+\f0\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'96 Print out the number of variables that are currently set to 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 value
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . If no variables equal that value, print 
+\f1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 0
+\f0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 .\uc0\u8232 \
+\ls2\ilvl0
+\f1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 END
+\f0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'96 Exit the program. Your program will always receive this as its last command.\uc0\u8232 \
+\pard\pardeftab720\sa240
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Commands will be fed to your program one at a time, with each command on its own line. Any output that your program generates should end with a newline character. Here are some example command sequences:\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1060\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth760\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\qc
+
+\b \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Input\cell 
+\pard\intbl\itap1\pardeftab720\qc
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Output\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1060\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth760\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 SET ex 10\
+GET ex\
+UNSET ex\
+GET ex\
+END\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+10\
+\
+NULL\
+\cell \lastrow\row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1980\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth760\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\qc
+
+\b \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Input\cell 
+\pard\intbl\itap1\pardeftab720\qc
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Output\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1980\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth760\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 SET a 10\
+SET b 10\
+NUMEQUALTO 10\
+NUMEQUALTO 20\
+SET b 30\
+NUMEQUALTO 10\
+END\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\
+2\
+0\
+\
+1\
+\cell \lastrow\row
+\pard\pardeftab720\sa280
+
+\b\fs28 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Transaction Commands\
+\pard\pardeftab720\sa240
+
+\b0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 In addition to the above data commands, your program should also support database transactions by also implementing these commands:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240
+\ls3\ilvl0
+\f1 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 BEGIN
+\f0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'96 Open a new transaction block. Transaction blocks can be nested; a 
+\f1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 BEGIN
+\f0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  can be issued inside of an existing block.\uc0\u8232 \
+\ls3\ilvl0
+\f1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ROLLBACK
+\f0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'96 Undo all of the commands issued in the 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 most recent
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  transaction block, and close the block. Print nothing if successful, or print 
+\f1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 NO TRANSACTION
+\f0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  if no transaction is in progress.\uc0\u8232 \
+\ls3\ilvl0
+\f1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 COMMIT
+\f0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'96 Close 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 all
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  open transaction blocks, permanently applying the changes made in them. Print nothing if successful, or print 
+\f1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 NO TRANSACTION
+\f0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  if no transaction is in progress.\uc0\u8232 \
+\pard\pardeftab720\sa240
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Any data command that is run outside of a transaction block should commit immediately. Here are some example command sequences:\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1300\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth760\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\qc
+
+\b \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Input\cell 
+\pard\intbl\itap1\pardeftab720\qc
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Output\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1300\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth760\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 BEGIN\
+SET a 10\
+GET a\
+BEGIN\
+SET a 20\
+GET a\
+ROLLBACK\
+GET a\
+ROLLBACK\
+GET a\
+END\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\
+10\
+\
+\
+20\
+\
+10\
+\
+NULL\
+\cell \lastrow\row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1300\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2100\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\qc
+
+\b \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Input\cell 
+\pard\intbl\itap1\pardeftab720\qc
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Output\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1300\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth2100\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 BEGIN\
+SET a 30\
+BEGIN\
+SET a 40\
+COMMIT\
+GET a\
+ROLLBACK\
+END\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\
+\
+\
+\
+40\
+NO TRANSACTION\
+\cell \lastrow\row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1300\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth760\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\qc
+
+\b \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Input\cell 
+\pard\intbl\itap1\pardeftab720\qc
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Output\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1300\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth760\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 SET a 50\
+BEGIN\
+GET a\
+SET a 60\
+BEGIN\
+UNSET a\
+GET a\
+ROLLBACK\
+GET a\
+COMMIT\
+GET a\
+END\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\
+50\
+\
+\
+\
+NULL\
+\
+60\
+\
+60\
+\cell \lastrow\row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1980\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth760\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\qc
+
+\b \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Input\cell 
+\pard\intbl\itap1\pardeftab720\qc
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Output\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1980\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth760\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+
+\b0 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 SET a 10\
+BEGIN\
+NUMEQUALTO 10\
+BEGIN\
+UNSET a\
+NUMEQUALTO 10\
+ROLLBACK\
+NUMEQUALTO 10\
+COMMIT\
+END\cell 
+\pard\intbl\itap1\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\
+1\
+\
+\
+0\
+\
+1\
+\
+\cell \lastrow\row
+\pard\pardeftab720\sa280
+
+\b\fs28 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 Performance Considerations\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240
+\ls4\ilvl0
+\b0\fs24 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The most common operations are 
+\f1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 GET
+\f0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , 
+\f1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 SET
+\f0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , 
+\f1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 UNSET
+\f0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 , and 
+\f1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 NUMEQUALTO
+\f0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 . All of these commands should have an expected worst-case runtime of 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 O(log N)
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  or better, where 
+\i \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 N
+\i0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  is the total number of variables stored in the database.\uc0\u8232 \
+\ls4\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The vast majority of transactions will only update a small number of variables. Accordingly, your solution should be efficient about how much memory each transaction uses.\uc0\u8232 \
+}
